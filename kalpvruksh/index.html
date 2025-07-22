@@ -3,27 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalpvruksh AI – Automate. Scale. Thrive.</title>
+    <title>Kalpvruksh AI - Automate. Scale. Thrive.</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Core Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="hero">
-        <!-- Matrix Canvas Background -->
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
         <canvas id="matrix-canvas" class="hero__matrix"></canvas>
-
-        <div class="container hero__container">
+        <div class="container">
             <div class="hero__content">
                 <h1 class="hero__title">Automate. Scale. Thrive.</h1>
                 <p class="hero__subtitle">Kalpvruksh AI helps you streamline operations using smart AI-powered systems and no-code automation — giving you back your time.</p>
-                <button class="btn btn--primary btn--lg hero__cta" id="hero-cta">Get a Free Automation Audit</button>
+                <!-- HERO SECTION BUTTON -->
+                <button class="btn btn--primary btn--lg" id="scheduleBtnHero">
+                    Schedule Your Free Call
+                </button>
             </div>
         </div>
     </section>
+
+    <!-- ================= ENQUIRY MODAL ================= -->
+    <div class="modal-overlay" id="enquiryModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeModal" aria-label="Close modal">×</button>
+            <div class="modal-header">
+                <h1 class="modal-title">Kalpvruksh-AI</h1>
+                <p class="modal-subtitle">Book Your Free Call</p>
+            </div>
+            <form class="enquiry-form" id="enquiryForm">
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="company">Company / Project</label>
+                    <input type="text" id="company" name="company" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">How can we help?</label>
+                    <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full-width btn--lg submit-btn">
+                    Submit Request
+                </button>
+            </form>
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✓</div>
+                <h3 class="success-title">Request Submitted!</h3>
+                <p class="success-text">Thanks, we'll be in touch soon!</p>
+            </div>
+        </div>
+    </div>
 
     <!-- ================= WHAT WE DO ================= -->
     <section class="services" id="services">
@@ -149,13 +190,16 @@
             <div class="final-cta__content">
                 <h2 class="final-cta__title">Let's Build Your First Automation Together</h2>
                 <div class="cta-buttons">
-                    <button class="btn btn--primary btn--lg final-cta__button" id="final-cta">Schedule Your Free Call Today</button>
-                    <a href="mailto:hello@kalpvruksh.ai" class="btn btn--outline btn--lg">Send us an Email</a>
+                    <!-- FINAL CTA BUTTON -->
+                    <button class="btn btn--primary btn--lg final-cta__button" id="scheduleBtnFinal">
+                        Schedule Your Free Call Today
+                    </button>
+                    <a href="mailto:veerarts8605@gmail.com?subject=Inquiry&body=Hello," class="btn btn--outline btn--lg">Send us an Email</a>
                 </div>
                 <div class="contact-info">
-                    <a href="mailto:hello@kalpvruksh.ai" class="contact-link">hello@kalpvruksh.ai</a>
+                    <a href="mailto:veerarts8605@gmail.com" class="contact-link">veerarts8605@gmail.com</a>
                     <span class="contact-separator">|</span>
-                    <a href="https://wa.me/your-number" target="_blank" class="contact-link">WhatsApp</a>
+                    <a href="https://wa.me/9825490251" target="_blank" class="contact-link">WhatsApp</a>
                     <span class="contact-separator">|</span>
                     <a href="https://linkedin.com/company/kalpvruksh-ai" target="_blank" class="contact-link">LinkedIn</a>
                 </div>
@@ -185,7 +229,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="app.js"></script>
 </body>
 </html>
